@@ -1,8 +1,14 @@
+html{
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
     background-color: #ffffff;
     display: flex;
     justify-content: center;
+    width: 100%;
+    height: auto;
 }
 
 nav {
@@ -15,6 +21,7 @@ nav {
     margin-top: 10px;
     border-radius: 10px;
     position: fixed;
+    z-index: 2;
 }
 
 .logo {
@@ -29,37 +36,49 @@ nav {
     background-clip: text;
     -webkit-text-fill-color: transparent;
     color: transparent;
+    font-size: auto;
 }
 
 .logo img {
-    width: 70px;
-    height: 50px;
+    width: 80px;
+    height: 60px;
 }
 
 .buttons button {
+    transition: .2s;
     background-color: #1cbd87bb;
     border: 0;
     border-radius: 10px;
     color: white;
-    font-size: 20px;
-    padding: 5px;
+    font-size: clamp(.80rem, .1vw, 2.5vw);
+    padding: 15px;
     margin-right: 10px;
     font-family: sans-serif;
+    flex-wrap: nowrap;
+    min-width: 50px;
+    max-width: 130px;
+    flex: 1;
+    width: auto;
+    height: auto;
+}
+
+.buttons button:hover{
+    transition: .2s;
+    background-color: #157c59bb;
 }
 
 main {
     width: 100%;
-    height: 100vh;
+    height: auto;
     display: flex;
     justify-content: center;
     flex-direction: column;
     border: 0;
     margin: 0;
 }
-
-section {
+.proje {
     width: 100%;
-    height: 100vh;
+    height: auto;
     display: flex;
     justify-content: center;
 }
@@ -73,19 +92,23 @@ section {
 
 }
 
-
-
 .titulo {
     text-align: center;
     color: #0c4121;
     font-family: 'MinhaFonte', sans-serif;
+    font-size: x-large;
+    margin: 0;
+    min-width: 80vh;
+    max-width: 250vh;
 }
 
-.projeto {          
-    width: 1000px;
+.projeto {
+    margin-top: 90px;
+    width: 90%;
     height: 400px;
     background-color: #14ad72e0;
     border-radius: 0 0 20px 20px;
+
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -94,16 +117,104 @@ section {
 .projeto p {
     display: flex;
     justify-content: center;
-    max-width: 800px;
+    max-width: 80%;
     margin: 0 auto;
     text-align: center;
-    font-size: 20px;
+    font-size: clamp(.85rem, 1.7vw, 2.5vw);
+    width: auto;
     color: #0c4121;
     font-family: 'MinhaFonte', sans-serif;
+    margin-bottom: 40px;
+}
+
+#aqua{
+    margin-top: 30px;
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.aquaponia{
+    width: 100vh;
+}
+
+.aquaphoto{
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    align-items: center;
+}
+
+.aquatitle{
+    font-size: 50px;
+    font-family: 'MinhaFonte';
+    display: flex;
+    align-items: center;
+}
+
+.aquaphoto img{
+    border-radius: 20px;
+}
+
+.aquaphoto h1{
+    min-width: 200px;
+    max-width: 100px;
+    text-align: center;
+    background-color: #0f833edc;
+    padding: 20px;
+    border-radius: 20px;
+    color: #ffff;
+}
+
+.how{
+    text-align: center;
+    margin: 30px;
+    font-size: 50px;
+    font-family: 'MinhaFonte';
+}
+
+.exemple{
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: center;
+}
+
+.exemple *{
+    margin: 20px;
+}
+
+.item{
+    font-size:60px;
+    text-align: center;
+    color: #ffff;
+}
+
+.coco{
+    transform: translateY(-15%);
+}
+
+.set{
+    width: 150px;
+}
+
+.set1{
+    transform: rotate(0deg) translate(40%,40%);
+}
+.set2{
+    transform: rotate(90deg ) translate(45%, 35%);
+}
+.set3{
+    transform: rotate(270deg) translate(30%, 35%);
+}
+.set4{
+    transform: rotate(180deg) translate(40%, 30%);
 }
 
 .planta{
-    margin: 70px;
     width: 200px;
     height: 200px;
     border: 5px solid black;
@@ -113,12 +224,13 @@ section {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    margin-top: 20px;
 }
 
 .tanque{
-    margin: 70px;
-    width: 400px;
+    width: 200px;
     height: 200px;
+    margin-top: 20px;
     border: 5px solid #0c2e41;
     background-color: rgb(0, 153, 255);
     border-radius:0 0 30px 30px;
@@ -139,3 +251,150 @@ section {
     align-items: center;
     margin-top: 30px;
 }
+
+.description{
+    text-align: center;
+    font-size:14px;
+    margin-top: 20px;
+}
+
+#quem-somos{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.quem{
+    width:50%;
+    height: auto;
+    display: flex;
+    margin:20px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    background-color: #16c9d6e0;
+    border-radius: 20px;
+    font-size: clamp(.85rem, 1.7vw, 2.5vw);
+    margin-bottom: 50px;
+}
+
+.quem h1{
+    font-size: 50px;
+    font-family: 'MinhaFonte';
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap');
+
+.quem p{
+    font-family: Arial;
+    margin: 20px;
+    font-weight: 800;
+}
+
+.nos{
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+    margin: 0;
+    flex-wrap: wrap;
+}
+
+.kauan img{
+    transition: .2s;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 5px solid #0c84a2;
+}
+.kauan img:hover{
+    transition: .2s;
+    width: 250px;
+    height:250px;
+    border-radius: 50%;
+    border: 5px solid #0c84a2;
+}
+
+.samilly img{
+    transition: .2s;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 5px solid #0c84a2;
+
+}
+
+.samilly img:hover{
+    transition: .2s;
+    width: 250px;
+    height:250px;
+    border-radius: 50%;
+    border: 5px solid #0c84a2;
+}
+
+.helliton img{
+    transition: .2s;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 5px solid #0c84a2   ;
+}
+
+.helliton img:hover{
+    transition: .2s;
+    width: 250px;
+    height:250px;
+    border-radius: 50%;
+    border: 5px solid #0c84a2;
+}
+
+.igor img{
+    background-color: #0c4121;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:#ffff;
+    border: 5px solid #0c84a2;
+    object-fit: cover;
+}
+
+.igor img:hover{
+    transition: .2s;
+    width: 250px;
+    height:250px;
+    border-radius: 50%;
+    border: 5px solid #0c84a2;
+}
+
+
+.guilherme img{
+    transition: .2s;
+    background-color: #0c4121;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:#ffff;
+    border: 5px solid #0c84a2;
+}
+
+.guilherme img:hover{
+    transition: .2s;
+    width: 250px;
+    height:250px;
+    border-radius: 50%;
+    border: 5px solid #0c84a2;
+}
+
+.nos h1{
+    margin: 0;
+}
+
