@@ -335,7 +335,7 @@ main {
     border: 5px solid #0c84a2;
 }
 
-.helliton img{
+.heliton img{
     transition: .2s;
     width: 200px;
     height: 200px;
@@ -343,7 +343,7 @@ main {
     border: 5px solid #0c84a2   ;
 }
 
-.helliton img:hover{
+.heliton img:hover{
     transition: .2s;
     width: 250px;
     height:250px;
