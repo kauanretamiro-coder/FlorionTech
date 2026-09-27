@@ -81,8 +81,7 @@ section {
     font-family: 'MinhaFonte', sans-serif;
 }
 
-.projeto {
-    margin-top: 90px;
+.projeto {          
     width: 1000px;
     height: 400px;
     background-color: #14ad72e0;
