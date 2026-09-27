@@ -108,7 +108,6 @@ main {
     height: 400px;
     background-color: #14ad72e0;
     border-radius: 0 0 20px 20px;
-
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -125,6 +124,24 @@ main {
     color: #0c4121;
     font-family: 'MinhaFonte', sans-serif;
     margin-bottom: 40px;
+}
+
+.Funciona{
+    width: 100%;
+    height: auto;
+    font-family: 'MinhaFonte';
+    font-size: clamp(.85rem, 1.7vw, 2.5vw);
+    margin: 30px;
+    margin: 0;
+}
+
+.func{
+    display: flex;
+    flex-direction: column;
+    color: #ffff;
+    background-color: #0c2e41;
+    width: 50%;
+    border-radius: 20px;
 }
 
 #aqua{
@@ -290,9 +307,9 @@ main {
 @import url('https://fonts.googleapis.com/css2?family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap');
 
 .quem p{
-    font-family: Arial;
+    font-family: 'MinhaFonte';
     margin: 20px;
-    font-weight: 800;
+    font-weight: 100;
 }
 
 .nos{
@@ -308,50 +325,34 @@ main {
     width: 200px;
     height: 200px;
     border-radius: 50%;
+    cursor: pointer;
     border: 5px solid #0c84a2;
 }
-.kauan img:hover{
-    transition: .2s;
-    width: 250px;
-    height:250px;
-    border-radius: 50%;
-    border: 5px solid #0c84a2;
-}
+
 
 .samilly img{
     transition: .2s;
     width: 200px;
     height: 200px;
     border-radius: 50%;
+    cursor: pointer;
     border: 5px solid #0c84a2;
 
 }
 
-.samilly img:hover{
-    transition: .2s;
-    width: 250px;
-    height:250px;
-    border-radius: 50%;
-    border: 5px solid #0c84a2;
-}
 
 .heliton img{
     transition: .2s;
     width: 200px;
     height: 200px;
     border-radius: 50%;
-    border: 5px solid #0c84a2   ;
-}
-
-.heliton img:hover{
-    transition: .2s;
-    width: 250px;
-    height:250px;
-    border-radius: 50%;
+    cursor: pointer;
     border: 5px solid #0c84a2;
 }
 
+
 .igor img{
+    transition: .2s;
     background-color: #0c4121;
     width: 200px;
     height: 200px;
@@ -362,14 +363,7 @@ main {
     color:#ffff;
     border: 5px solid #0c84a2;
     object-fit: cover;
-}
-
-.igor img:hover{
-    transition: .2s;
-    width: 250px;
-    height:250px;
-    border-radius: 50%;
-    border: 5px solid #0c84a2;
+    cursor: pointer;
 }
 
 
@@ -384,17 +378,87 @@ main {
     align-items: center;
     color:#ffff;
     border: 5px solid #0c84a2;
+    cursor: pointer;
 }
 
-.guilherme img:hover{
-    transition: .2s;
-    width: 250px;
-    height:250px;
-    border-radius: 50%;
-    border: 5px solid #0c84a2;
+.foto {
+  width: 250px;
+  max-width: 80vw;
+  cursor: pointer;
+  border-radius: 12px;
+}
+
+dialog::backdrop {
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(6px);
+}
+
+dialog img {
+  width: 100%;
+  max-height: 60vh;
+  object-fit: contain;
+  border-radius: 10px;
+}
+
+dialog p {
+  font-size: 18px;
+}
+
+dialog {
+  width: min(400px, 85vw);
+  padding: 20px;
+  border: none;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.close {
+  float: right;
+  border: none;
+  background: none;
+  font-size: 26px;
+  cursor: pointer;
 }
 
 .nos h1{
     margin: 0;
 }
 
+#sobre-nos{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-evenly; 
+    margin-top: 50px;
+}
+
+.sobre{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #16c9d6e0;
+    min-width: 30%;
+    max-width: 40%;
+    width: auto;
+    height: auto;
+    border-radius: 20px;
+    font-size: clamp(.85rem, 1.7vw, 2.5vw);
+    font-family: 'MinhaFonte';
+    text-align: center;
+    margin: 30px;
+}
+
+.equipe h1{
+    font-size: clamp(.85rem, 1.7vw, 2.5vw);
+    font-family: 'MinhaFonte';
+    text-align: center;
+}
+
+.equipe img{
+    width: auto;
+    min-width: 40%;
+    max-width: 90%;
+    border-radius: 20px;
+}

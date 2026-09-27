@@ -6,13 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Florion Tech</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 
 <body>
 
     <nav>
         <div class="logo">
-            <img src="Florion logo.png" alt="">
+            <img src="imagens/Florion logo.png" alt="">
             <h1>FLORION TECH</h1>
         </div>
         <div class="buttons">
@@ -20,7 +21,7 @@
             <a href="#aqua"><button>Aquaponia</button></a>
             <a href="#exemplo"><button>Exemplo</button></a>
             <a href="#quem-somos"><button>Quem Somos</button></a>
-            <a href="#sobre-nós"><button>Sobre Nós</button></a>
+            <a href="#sobre-nos"><button>Sobre Nós</button></a>
             <a href="#contato"><button>Contato</button></a>
         </div>
     </nav>
@@ -34,8 +35,19 @@
                 <p>
                     O projeto Florion Tech é um projeto de automação para um sistema de aquaponia que temos em nosso colégio. O projeto consiste em um sistema de automação que controla a temperatura, a umidade e a iluminação do ambiente, além de monitorar o nível de água e nutrientes do sistema de aquaponia. O objetivo do projeto é tornar o sistema mais eficiente e sustentável, além de facilitar o trabalho dos alunos que cuidam do sistema.
                 </p>
+                <div class="projoto">
+                    <img src="imagens/" alt="">
+                </div>
             </div>
         </section>
+
+        <div class="Funciona">
+            <div class="func">
+
+                <h1>Como ele funciona</h1>
+                <p>Ele funciona através de sensores, que manda as informações para uma placa esp32, que envia todos os dados para o nosso banco de dados, que viram as informações que aparecem no nosso site</p>
+            </div>
+        </div>
 
         <div id="aqua">
             <div class="aquatitle">
@@ -96,41 +108,72 @@
             </div>
         </div>
 
+        
         <div class="nos">
-            <div class="kauan">
+            <div id="kauan" class="kauan">
                 <img src="imagens/kauan.jpeg" alt="Kauan">
                 <h1 class="kauan">Kauan</h1>
             </div>
+            <dialog id="popupkauan">
+        <button id="fecharkauan" class="close" aria-label="Fechar">&times;</button>
+        <img src="imagens/kauan.jpeg" alt="Foto ampliada">
+        <p>Esse é o kauan, ele é do 3B Agro, ele ficou responsável pela pequisa, e pelo site</p>
+      </dialog>
 
-            <div class="igor">
+            <div id="igor" class="igor">
                 <img src="imagens/igor.jpeg" alt="Igor">
                 <h1>Igor</h1>
             </div>
+            <dialog id="popupigor">
+        <button id="fecharigor" class="close" aria-label="Fechar">&times;</button>
+        <img src="imagens/igor.jpeg" alt="Foto ampliada">
+        <p>Esse é o Igor, ele é do 3B Agro, ele ficou responsável pela pesquisa e pela maquete</p>
+      </dialog>
 
-            <div class="samilly">
+            <div id="samilly" class="samilly">
             <img src="imagens/samilly.jpeg" alt="Samilly">
                 <h1>Samilly</h1>
             </div>
+            <dialog id="popupsamilly">
+        <button id="fecharsamilly" class="close" aria-label="Fechar">&times;</button>
+        <img src="imagens/samilly.jpeg" alt="Foto ampliada">
+        <p>Essa é a Samilly, ela e do 2A Desenvolvimento de sistema, ela ficou responsável pelo banco de dados e pela maquete</p>
+      </dialog>
 
-            <div class="guilherme">
+            <div  id="guilherme" class="guilherme">
                 <img src="imagens/guilherme.jpeg" alt="Guilherme">
                 <h1>Guilherme</h1>
             </div>
+            <dialog id="popupguilherme">
+        <button id="fecharguilherme" class="close" aria-label="Fechar">&times;</button>
+        <img src="imagens/guilherme.jpeg" alt="Foto ampliada">
+        <p>Esse é o Guilherme, ele é do 3B Agro ele ficou responsável pelo banco de dados</p>
+      </dialog>
 
-            <div class="heliton">
-                <img src="imagens/helliton.jpeg" alt="Helliton">
+            <div id="heliton" class="heliton">
+                <img src="imagens/heliton.jpeg" alt="Helliton">
                 <h1>Heliton</h1>
             </div>
+             <dialog id="popupheliton">
+        <button id="fecharheliton" class="close" aria-label="Fechar">&times;</button>
+        <img src="imagens/heliton.jpeg" alt="Foto ampliada">
+        <p>Esse é o Héliton, ele é o professor responsável, ele nos ajudou a desenvolvero projeto </p>
+      </dialog>
 
             <div class="equipe"></div>
 
         </div>
 
-        <div id="sobre-nós">
+        <div id="sobre-nos">
             <div class="sobre">
                 <h1>Sobre Nós</h1>
                 <p>Somos um grupo de alunos do colégio Rui Barbosa, que desenvolveu o projeto Florion Tech, um projeto de automação para um sistema de aquaponia. O projeto foi desenvolvido com o objetivo de tornar o sistema mais eficiente e sustentável, além de facilitar o trabalho dos alunos que cuidam do sistema.</p>
             </div>  
+            <div class="equipe">
+                <h1>Essa é a nossa equipe</h1>
+                <img src="imagens/equipe.png" alt="">
+            </div>
+        </div>
 </body>
 
 </html>
