@@ -1,5 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
 html{
     scroll-behavior: smooth;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+p{
+    font-family:'Inter', sans-serif;
 }
 
 body {
@@ -95,11 +105,11 @@ main {
 .titulo {
     text-align: center;
     color: #0c4121;
-    font-family: 'MinhaFonte', sans-serif;
-    font-size: x-large;
+    font-size: clamp(1vw, 2vw, 3vw);
     margin: 0;
     min-width: 80vh;
     max-width: 250vh;
+    font-family: 'Space Grotesk', sans-serif;
 }
 
 .projeto {
@@ -119,29 +129,39 @@ main {
     max-width: 80%;
     margin: 0 auto;
     text-align: center;
-    font-size: clamp(.85rem, 1.7vw, 2.5vw);
+    font-size: clamp(1rem, 2.3vw, 3vw);
     width: auto;
     color: #0c4121;
-    font-family: 'MinhaFonte', sans-serif;
     margin-bottom: 40px;
+    font-family: 'Inter', sans-serif;
 }
 
 .Funciona{
     width: 100%;
     height: auto;
-    font-family: 'MinhaFonte';
     font-size: clamp(.85rem, 1.7vw, 2.5vw);
     margin: 30px;
     margin: 0;
+    display: flex;
+    justify-content: center;
+    margin: 20px;
 }
 
 .func{
     display: flex;
+    align-items: center;
     flex-direction: column;
     color: #ffff;
     background-color: #0c2e41;
     width: 50%;
     border-radius: 20px;
+    text-align: center;
+    padding: 20px;
+    margin: 0;
+}
+
+.func h1{
+    margin: 0;
 }
 
 #aqua{
@@ -166,9 +186,14 @@ main {
 
 .aquatitle{
     font-size: 50px;
-    font-family: 'MinhaFonte';
     display: flex;
     align-items: center;
+    font-family: 'Space Grotesk', sans-serif;
+    margin: 0;
+}
+
+.aquatitle h1{
+    margin: 0;
 }
 
 .aquaphoto img{
@@ -301,13 +326,13 @@ main {
 
 .quem h1{
     font-size: 50px;
-    font-family: 'MinhaFonte';
+  font-family: 'Space Grotesk', sans-serif;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap');
 
 .quem p{
-    font-family: 'MinhaFonte';
+    font-family: 'Inter', sans-serif;
     margin: 20px;
     font-weight: 100;
 }
@@ -445,14 +470,12 @@ dialog {
     height: auto;
     border-radius: 20px;
     font-size: clamp(.85rem, 1.7vw, 2.5vw);
-    font-family: 'MinhaFonte';
     text-align: center;
     margin: 30px;
 }
 
 .equipe h1{
     font-size: clamp(.85rem, 1.7vw, 2.5vw);
-    font-family: 'MinhaFonte';
     text-align: center;
 }
 
