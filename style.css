@@ -112,6 +112,10 @@ main {
     font-family: 'Space Grotesk', sans-serif;
 }
 
+.titulo h1{
+    margin: 0;
+}
+
 .projeto {
     margin-top: 90px;
     width: 90%;
