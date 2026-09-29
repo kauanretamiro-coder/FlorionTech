@@ -129,7 +129,11 @@ main {
     max-width: 80%;
     margin: 0 auto;
     text-align: center;
+<<<<<<< HEAD
     font-size: clamp(1rem, 2.3vw, 3vw);
+=======
+    font-size: clamp(.85rem, 2vw, 3vw);
+>>>>>>> 0e6829f (acesso update)
     width: auto;
     color: #0c4121;
     margin-bottom: 40px;
@@ -144,7 +148,12 @@ main {
     margin: 0;
     display: flex;
     justify-content: center;
+<<<<<<< HEAD
     margin: 20px;
+=======
+    margin: 0;
+    margin-top: 20px;
+>>>>>>> 0e6829f (acesso update)
 }
 
 .func{
@@ -472,11 +481,23 @@ dialog {
     font-size: clamp(.85rem, 1.7vw, 2.5vw);
     text-align: center;
     margin: 30px;
+<<<<<<< HEAD
 }
 
 .equipe h1{
     font-size: clamp(.85rem, 1.7vw, 2.5vw);
     text-align: center;
+=======
+    margin-top: 50px;
+    padding: 10px;
+}
+
+.equipe h1{
+    font-size: clamp(.85rem, 2.5vw, 2.5vw);
+    text-align: center;
+    margin: 0;
+    margin-bottom: 10px;
+>>>>>>> 0e6829f (acesso update)
 }
 
 .equipe img{

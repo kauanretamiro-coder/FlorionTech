@@ -1,0 +1,28 @@
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    width: 40%;
+    height: 90%;
+    border-radius: 20px;
+    background-color: #81818198;
+    padding: 0;
+    margin: 10px;
+}
+
+.logo{
+    display: flex;
+    justify-content: center;
+}
+
+.logo img{
+    width: 30%;
+    height: 30%;
+}
