@@ -129,7 +129,6 @@ main {
     max-width: 80%;
     margin: 0 auto;
     text-align: center;
-    font-size: clamp(1rem, 2.3vw, 3vw);
     font-size: clamp(.85rem, 2vw, 3vw);
     width: auto;
     color: #0c4121;
