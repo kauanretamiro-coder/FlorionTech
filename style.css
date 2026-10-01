@@ -107,6 +107,17 @@ body {
   font-family: 'Space Grotesk', sans-serif;
 }
 
+.menu-dropdown summary::after{
+    content: "▾";
+    display: inline-block;
+    margin-left: 8px;
+    transition: .2s;
+}
+
+.menu-dropdown[open] summary::after{
+    transform: rotate(180deg);
+}
+
 .menu-opcoes {
   position: absolute;
   top: calc(100% + 4px);
@@ -125,6 +136,7 @@ body {
   color: #ffff;
   text-decoration: none;
   border: 1px solid #0003;
+  font-size: clamp(1vw, 5vw, 6vw);
 }
 
 .menu-opcoes a[open]{
@@ -168,7 +180,8 @@ body {
     .projeto p{
     max-width: 100%;
     font-size: clamp(1vw, 6vw, 8vw);
-    margin: 10px;
+    margin: 20px;
+    margin-top: 0;
     }
 
     .func p{
@@ -180,7 +193,7 @@ body {
     }
 
     .aquaphoto img{
-        width: 100%;
+        width: 95%;
     }
 
     .aquaphoto h1{
@@ -214,6 +227,7 @@ body {
 
     .sobre p{
     font-size: clamp(1vw, 6vw, 6vw);
+    margin: 10px;
 
     }
 
