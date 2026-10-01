@@ -62,6 +62,11 @@ body {
     font-size: 200%;
     }
 
+    .func{
+        width: 50%;
+        font-size: clamp(1vw, 1.7vw, 4vw);
+    }
+
     .aquaphoto{
         width: 100%;
         align-items: center;
@@ -84,13 +89,6 @@ body {
 
     .sobre{
         max-width: 50%;
-    }
-}
-
-@media (max-width:1024px) {
-   .projeto p{
-    max-width: 100%;
-    font-size: 170%;
     }
 }
 
@@ -188,8 +186,16 @@ body {
     margin-top: 0;
     }
 
+    .func{
+    width: 70%;
+    }
+
+    .func h1{
+        font-size:clamp(1vw, 7vw, 7vw) ;
+    }
+
     .func p{
-    font-size: clamp(1vw, 6vw, 8vw);
+    font-size: clamp(1vw, 5vw, 8vw);
 }
 
     .aquaphoto{
@@ -227,6 +233,10 @@ body {
 
     .sobre{
         max-width: none;
+    }
+
+    .sobre h1{
+        font-size: clamp(1vw, 8vw, 8vw);
     }
 
     .sobre p{
@@ -367,7 +377,6 @@ main {
     flex-direction: column;
     color: #ffff;
     background-color: #0c2e41;
-    width: 70%;
     border-radius: 20px;
     text-align: center;
     padding: 20px;
@@ -704,7 +713,6 @@ dialog {
     border-radius: 20px;
 }
 
-/* Ajustes para evitar conteúdo maior que a tela */
 html,
 body {
     width: 100%;
@@ -714,7 +722,6 @@ main {
     min-width: 0;
 }
 
-/* A largura da foto deve depender da largura disponível */
 .aquaponia {
     width: 100%;
     max-width: 600px;
@@ -730,7 +737,6 @@ main {
     min-width: 0;
 }
 
-/* Menu adaptado para celulares e tablets */
 @media (max-width: 768px) {
     .buttons {
         display: none;
@@ -774,7 +780,6 @@ main {
         margin: 0;
     }
 
-    /* Mantém o diagrama em três colunas que cabem na tela */
     .exemple {
         grid-template-columns: repeat(3, minmax(0, 1fr));
         align-items: center;
