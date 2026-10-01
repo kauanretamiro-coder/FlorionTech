@@ -92,15 +92,6 @@ main {
     display: flex;
     justify-content: center;
 }
-    
-
-@font-face {
-    font-family: 'MinhaFonte';
-    src: url('bounce_dash/Bounce\ Dash.otf') format('opentype');
-    font-weight: 400;
-    font-style: normal;
-
-}
 
 .titulo {
     text-align: center;
