@@ -32,6 +32,10 @@ body {
         display: flex;
     }
 
+    #dropdown{
+        display: none;
+    }
+
     body{
         width:100%;
     }
@@ -86,27 +90,84 @@ body {
     }
 }
 
+.menu-dropdown {
+  display: none;
+  position: relative;
+  margin-right: 10px;
+}
+
+.menu-dropdown summary {
+  list-style: none;
+  cursor: pointer;
+  background:#0d5329;
+  padding: 10px 15px;
+  border-radius: 20px;
+  color: #ffff;
+  font-size: clamp(1vw, 5vw, 6vw);
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+.menu-opcoes {
+  position: absolute;
+  top: calc(100% + 4px);
+  right: 0;
+  width: 160px;
+  background: #1a9851;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px #0003;
+  overflow: hidden;
+  z-index: 10;
+}
+
+.menu-opcoes a {
+  display: block;
+  padding: 12px;
+  color: #ffff;
+  text-decoration: none;
+  border: 1px solid #0003;
+}
+
+.menu-opcoes a[open]{
+    background-color: #0c4121;
+}
+
+.menu-opcoes a:hover {
+  background: #136f3b;
+}
+
+@media (max-width: 475px) {
+  .menu-dropdown {
+    display: block;
+  }
+}
+
 @media (max-width: 475px){
     html{
-        width: 600px;
+        width: 660px;
     }
 
     nav{
         width: 90%;
-        justify-content: center;
+        justify-content: space-between;
     }
 
     .buttons{
         display: none;
     }
 
+    #dropdown{
+        display: block;
+        padding: 10px;
+        border-radius: 20px;
+    }
+
     .titulo{
-    font-size: clamp(1vw, 4vw, 5vw);
+    font-size: clamp(1vw, 5vw, 5vw);
     }
 
     .projeto p{
     max-width: 100%;
-    font-size: 120%;
+    font-size: clamp(1vw, 6vw, 8vw);
     margin: 10px;
     }
 
@@ -151,8 +212,23 @@ body {
         max-width: none;
     }
 
+    .sobre p{
+    font-size: clamp(1vw, 6vw, 6vw);
+
+    }
+
     #sobre-nos{
         flex-wrap: wrap;
+    }
+
+    .equipe{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .equipe h1{
+        font-size: clamp(1vw, 8vw, 10vw) ;
     }
 
 }
@@ -585,17 +661,19 @@ dialog {
     width: auto;
     height: auto;
     border-radius: 20px;
-    font-size: clamp(.85rem, 1.7vw, 2.5vw);
+    font-size: clamp(.85rem, 2vw, 2.5vw);
     text-align: center;
     margin: 30px;
 }
 
-.equipe{
-    margin-bottom: 25px;
+.sobre h1{
+    margin: 0;
+}
+
+.equipe{    margin-bottom: 25px;
 }
 
 .equipe h1{
-    font-size: clamp(.85rem, 2.5vw, 2.5vw);
     text-align: center;
     margin: 0;
     margin-bottom: 10px;
