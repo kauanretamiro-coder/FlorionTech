@@ -16,11 +16,14 @@ body{
     align-items: center;
 }
 
+
+
 @media (max-width: 1440px) {
     .container {
         width: 80%;
         margin: 10px;
     }
+
 }
 
 @media (min-height: 800px) {
@@ -28,6 +31,7 @@ body{
         height: auto;
         padding: 20px;
         margin: 0;
+    }
 
         .entrar{
             width: 100%;
@@ -46,7 +50,6 @@ body{
             font-weight: bold;
             font-family: 'Space Grotesk', sans-serif;
         }
-    }
 
 }
 

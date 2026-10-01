@@ -17,20 +17,154 @@ body {
     background-color: #ffffff;
     display: flex;
     justify-content: center;
-    width: 100%;
     height: auto;
+}
+
+@media (max-width:2000px){
+    html{
+    }
+
+    .nav{
+        position: fixed;
+    }
+
+    .buttons{
+        display: flex;
+    }
+
+    body{
+        width:100%;
+    }
+
+    section{
+        width: 100%;
+    }
+
+    nav{
+        width: 99%;
+        justify-content: space-between;
+    }
+
+    .projeto{
+        width: 90%;
+    }
+
+    .projeto p{
+    max-width: 100%;
+    font-size: 200%;
+    }
+
+    .aquaphoto{
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: nowrap;
+    }
+
+    .aquaphoto h1{
+        width: 80%;
+        margin: 10px;
+    }
+
+    .exemple{
+    grid-template-columns: auto auto auto;
+    }
+
+    .quem{
+        width: 60%;
+    }
+
+    .sobre{
+        max-width: 50%;
+    }
+}
+
+@media (max-width:1024px) {
+   .projeto p{
+    max-width: 100%;
+    font-size: 170%;
+    }
+}
+
+@media (max-width: 375px){
+    html{
+        width: 600px;
+    }
+
+    nav{
+        width: 90%;
+        justify-content: center;
+    }
+
+    .buttons{
+        display: none;
+    }
+
+    .titulo{
+    font-size: clamp(1vw, 4vw, 5vw);
+    }
+
+    .projeto p{
+    max-width: 100%;
+    font-size: 120%;
+    margin: 10px;
+    }
+
+    .func p{
+    font-size: clamp(1vw, 6vw, 8vw);
+}
+
+    .aquaphoto{
+        flex-wrap: wrap;
+    }
+
+    .aquaphoto img{
+        width: 100%;
+    }
+
+    .aquaphoto h1{
+        width: 100%;
+    }
+
+    .how{
+    font-size: clamp(1vw, 6vw, 6vw);
+    }
+
+    .exemple{
+        display: grid;
+    }
+
+    .quem{
+        width: 80%;
+    }
+
+    .quem h1{
+    font-size: clamp(1vw, 6vw, 6vw);
+}
+
+    .quem p{
+    font-size: clamp(1vw, 6vw, 6vw);
+    margin: 0;
+    }
+
+    .sobre{
+        max-width: none;
+    }
+
+    #sobre-nos{
+        flex-wrap: wrap;
+    }
+
 }
 
 nav {
     display: flex;
-    justify-content: space-between;
     align-items: center;
     background-color: #0f833edc;
-    width: 99%;
-    height: 70px;
-    margin-top: 10px;
-    border-radius: 10px;
     position: fixed;
+    height: 70px;
+    margin-top: 5px;
+    border-radius: 10px;
     z-index: 2;
 }
 
@@ -87,8 +221,6 @@ main {
     margin: 0;
 }
 .proje {
-    width: 100%;
-    height: auto;
     display: flex;
     justify-content: center;
 }
@@ -96,10 +228,9 @@ main {
 .titulo {
     text-align: center;
     color: #0c4121;
-    font-size: clamp(1vw, 2vw, 3vw);
     margin: 0;
-    min-width: 80vh;
-    max-width: 250vh;
+    min-width: 80%;
+    max-width: 100%;
     font-family: 'Space Grotesk', sans-serif;
 }
 
@@ -121,20 +252,15 @@ main {
 .projeto p {
     display: flex;
     justify-content: center;
-    max-width: 80%;
-    margin: 0 auto;
     text-align: center;
-    font-size: clamp(.85rem, 2vw, 3vw);
     width: auto;
     color: #0c4121;
-    margin-bottom: 40px;
     font-family: 'Inter', sans-serif;
 }
 
 .Funciona{
     width: 100%;
     height: auto;
-    font-size: clamp(.85rem, 1.7vw, 2.5vw);
     margin: 0;
     display: flex;
     justify-content: center;
@@ -147,7 +273,7 @@ main {
     flex-direction: column;
     color: #ffff;
     background-color: #0c2e41;
-    width: 50%;
+    width: 70%;
     border-radius: 20px;
     text-align: center;
     padding: 20px;
@@ -157,6 +283,8 @@ main {
 .func h1{
     margin: 0;
 }
+
+
 
 #aqua{
     margin-top: 30px;
@@ -173,13 +301,15 @@ main {
 
 .aquaphoto{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
+    justify-content: center;
     gap: 20px;
+    margin: 10px;
     align-items: center;
 }
 
 .aquatitle{
-    font-size: 50px;
+    font-size: clamp(1rem, 2.5rem, 3.5rem);
     display: flex;
     align-items: center;
     font-family: 'Space Grotesk', sans-serif;
@@ -195,8 +325,6 @@ main {
 }
 
 .aquaphoto h1{
-    min-width: 200px;
-    max-width: 100px;
     text-align: center;
     background-color: #0f833edc;
     padding: 20px;
@@ -207,7 +335,6 @@ main {
 .how{
     text-align: center;
     margin: 30px;
-    font-size: 50px;
     font-family: 'MinhaFonte';
 }
 
@@ -215,7 +342,6 @@ main {
     width: 100%;
     height: auto;
     display: grid;
-    grid-template-columns: auto auto auto;
     justify-content: center;
 }
 
@@ -304,7 +430,6 @@ main {
 }
 
 .quem{
-    width:50%;
     height: auto;
     display: flex;
     margin:20px;
@@ -319,7 +444,6 @@ main {
 }
 
 .quem h1{
-    font-size: 50px;
   font-family: 'Space Grotesk', sans-serif;
 }
 
@@ -458,8 +582,6 @@ dialog {
     align-items: center;
     flex-direction: column;
     background-color: #16c9d6e0;
-    min-width: 30%;
-    max-width: 40%;
     width: auto;
     height: auto;
     border-radius: 20px;
@@ -468,12 +590,8 @@ dialog {
     margin: 30px;
 }
 
-.equipe h1{
-    font-size: clamp(.85rem, 1.7vw, 2.5vw);
-    text-align: center;
-
-    margin-top: 50px;
-    padding: 10px;
+.equipe{
+    margin-bottom: 25px;
 }
 
 .equipe h1{
