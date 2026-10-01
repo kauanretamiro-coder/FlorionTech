@@ -159,7 +159,7 @@ body {
 
 @media (max-width: 475px){
     html{
-        width: 660px;
+        width: 100%;
     }
 
     nav{
@@ -702,4 +702,140 @@ dialog {
     min-width: 40%;
     max-width: 90%;
     border-radius: 20px;
+}
+
+/* Ajustes para evitar conteúdo maior que a tela */
+html,
+body {
+    width: 100%;
+}
+
+main {
+    min-width: 0;
+}
+
+/* A largura da foto deve depender da largura disponível */
+.aquaponia {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+}
+
+.aquaphoto {
+    width: calc(100% - 20px);
+    flex-wrap: wrap;
+}
+
+.aquaphoto > * {
+    min-width: 0;
+}
+
+/* Menu adaptado para celulares e tablets */
+@media (max-width: 768px) {
+    .buttons {
+        display: none;
+    }
+
+    .menu-dropdown {
+        display: block;
+        flex-shrink: 0;
+    }
+
+    nav {
+        width: calc(100% - 20px);
+    }
+
+    .logo {
+        min-width: 0;
+        margin: 5px;
+    }
+
+    .logo img {
+        width: 50px;
+        height: auto;
+    }
+
+    .logo h1 {
+        font-size: clamp(14px, 4vw, 22px);
+    }
+
+    .menu-dropdown summary,
+    .menu-opcoes a {
+        font-size: 16px;
+    }
+
+    .projeto {
+        height: auto;
+        padding: 20px 10px;
+    }
+
+    .aquaphoto h1 {
+        width: 100%;
+        margin: 0;
+    }
+
+    /* Mantém o diagrama em três colunas que cabem na tela */
+    .exemple {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        align-items: center;
+        justify-items: center;
+        padding: 10px;
+        gap: 8px;
+    }
+
+    .exemple * {
+        margin: 0;
+        min-width: 0;
+    }
+
+    .exemple > div {
+        max-width: 100%;
+    }
+
+    .planta,
+    .tanque {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 1;
+    }
+
+    .planta h1 {
+        font-size: clamp(14px, 4vw, 24px);
+    }
+
+    .tanque span,
+    .item {
+        font-size: clamp(28px, 8vw, 50px);
+    }
+
+    .set {
+        display: block;
+        width: 100%;
+        max-width: 80px;
+        height: auto;
+    }
+
+    #sobre-nos {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .sobre {
+        width: calc(100% - 40px);
+        max-width: none;
+        margin: 20px;
+    }
+
+    .equipe {
+        width: 100%;
+        min-width: 0;
+        text-align: center;
+    }
+
+    .equipe img {
+        width: 90%;
+        min-width: 0;
+        max-width: 600px;
+        height: auto;
+    }
 }
