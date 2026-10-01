@@ -18,7 +18,7 @@ body{
 
 @media (max-width: 1440px) {
     .container {
-        width: auto;
+        width: 80%;
         margin: 10px;
     }
 }
@@ -27,6 +27,7 @@ body{
     .container {
         height: auto;
         padding: 20px;
+        margin: 0;
 
         .entrar{
             width: 100%;
