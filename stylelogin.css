@@ -168,7 +168,7 @@ margin-top: 3%;
     text-decoration: none;
 }
 
-.entrar a:active{
+.entrar button:active{
     transition: transform .15s, background-color 0.15s ;
     background-color: #0d5e3fe0;
     transform: scale(.95);
