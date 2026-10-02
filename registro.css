@@ -37,21 +37,58 @@ nav{
 
 .inicio{
     width: 100%;
-    border: 0;
+}
+
+.inicio img{
+    width: 20%;
+}
+
+a {
+    text-decoration: none;
 }
 
 .inicio button{
-    border: 0;
     width:100% ;
-    margin-top: 30px;
+    margin-top: 10px;
     padding: 10px;
-    background-color: transparent;
+    background-color: #0c2e41;
     cursor: pointer;
     color: #ffff;
     font-size: clamp(1vw, 1.5vw, 2vw);
     font-family: 'Space Grotesk';
+    display: flex;
+    justify-content: center;
+    border: 0;
 }
 
 .conta{
+    width: 100%;
+}
 
+.fotoconta{
+    filter: brightness(0) invert(1);
+}
+
+.manual{
+    float: right;
+}
+
+.manual button{
+    margin: 10px;
+    border-radius: 20px;
+    padding: 10px;
+    background-color: #0c2e41;
+    cursor: pointer;
+    color: #ffff;
+    font-size: clamp(1vw, 1vw, 2vw);
+    font-family: 'Space Grotesk';
+    display: flex;
+    justify-content: center;
+    border: 0;
+}
+
+.adicionar{
+    width: 300px;
+    height: auto;
+    background-color: red;
 }
