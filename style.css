@@ -53,6 +53,11 @@ body {
         justify-content: space-between;
     }
 
+    .titulo h1{
+        font-size: clamp(1vw, 3vw, 5vw);
+        margin: 0;
+    }
+
     .projeto{
         width: 90%;
     }
@@ -60,11 +65,16 @@ body {
     .projeto p{
     max-width: 100%;
     font-size: 200%;
+    margin: 15px;
     }
 
     .func{
         width: 50%;
         font-size: clamp(1vw, 1.7vw, 4vw);
+    }
+
+    .how h1{
+        font-size: clamp(1vw, 6vw, 8vw);
     }
 
 .aquaphoto {
@@ -194,7 +204,7 @@ body {
 
     .projeto h1{
         width: 100%;
-        font-size: clamp(1vw,10vw, 10vw) ;
+        font-size: clamp(1vw, 10vw, 10vw) ;
     }
 
     .projeto p{
