@@ -1,6 +1,6 @@
-const kauan = document.getElementById("kauan");
-const popupkauan = document.getElementById("popupkauan");
-const fecharkauan = document.getElementById("fecharkauan");
+const kauan = document.getElementById("kauan"); //oq vai ser clicado
+const popupkauan = document.getElementById("popupkauan"); //oq vai ser mostrado
+const fecharkauan = document.getElementById("fecharkauan"); //quem vai fechar
 
 kauan.addEventListener("click", () => {
   popupkauan.showModal();

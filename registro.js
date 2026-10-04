@@ -1,11 +1,11 @@
 const popup = document.getElementById("popup");
-const popupregistro = document.getElementById("popupregistro");
+const popupregistro = document.getElementById("popupmanual");
 const fecharpopup= document.getElementById("fecharpopup");
 
-igor.addEventListener("click", () => {
-  popup.showModal();
+popup.addEventListener("click", () => {
+  popupregistro.showModal();
 });
 
 fecharpopup.addEventListener("click", () => {
-  popup.close();
+  popupregistro.close();
 }); 
