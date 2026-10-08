@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 * {
       box-sizing: border-box;
     }
@@ -62,4 +63,58 @@
     .login a {
       color: #2563eb;
       text-decoration: none;
+=======
+* {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #edf2f7;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+    }
+
+    .cadastro {
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      width: 350px;
+      max-width: 95%;
+      box-shadow: 0 5px 20px #0001;
+    }
+
+    h2 {
+      text-align: center;
+    }
+
+    input {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      background: #2563eb;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #1d4ed8;
+    }
+
+    #mensagem {
+      text-align: center;
+      font-size: 14px;
+>>>>>>> 9adfeae86941cbdeddc20ff6d6f1f7e06c392c1e
     }

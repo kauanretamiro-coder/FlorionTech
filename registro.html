@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tela de Registro</title>
+    <link rel="stylesheet" href="registro.css">
+    <script src="registro.js" defer></script>
+</head>
+<body>
+    <nav>
+        <div class="categorias">
+            <div class="logo">
+                <img src="imagens/Florion logo.png" alt="">
+            </div>
+            <a href="registro.html" class="inicio"><button>🏠 inicio</button></a>
+            <a href="index.html" class="inicio"><button>🕖 Histórico</button></a>
+            <a href="index.html" class="inicio"><button>📈 Gráficos</button></a>
+        </div>  
+
+        <div class="conta">
+            <a href="index.html" class="inicio"><button><img src="imagens/conta.png" alt="" class="fotoconta"> Conta</button></a>
+            <a href="index.html" class="inicio"><button>🚪 Sair </button></a>
+        </div>
+    </nav>
+    <main>
+
+        <div class="manual">
+            <div class="manual" id="popup">Adicionar <br> Manualmente</div>    
+        </div>
+
+        <dialog id="popupmanual">
+
+         <button id="fecharpopup" class="close" aria-label="Fechar">&times;</button> 
+
+            <div class="adicionar">
+                <select name="Quem" id="Quem">
+                    <option value="Kauan">Kauan</option>
+                    <option value="Igor">Igor</option>
+                    <option value="Samilly">Samilly</option>
+                    <option value="Guilherme">Guilherme</option>
+                </select>
+
+                <select name="Oque" id="Oque">
+                    <option value="Ph"> PH</option>
+                    <option value="nitrogênio"> nitrogênio</option>
+                    <option value="Amônia"> Amônia</option>
+                    <option value="Fosforo">Fósforo</option>
+                </select>
+        </div>
+
+        </dialog>
+
+        <div class="Temp">
+
+            <h1 class="Temperatura">🌡️Temperatura</h1>
+
+          <div class="valor">
+                <?= htmlspecialchars($temperatura) ?> °C
+           </div>
+
+        </div>
+
+    </main>
+</body>
+</html>
