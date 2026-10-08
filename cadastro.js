@@ -1,6 +1,6 @@
 
-const URL_SUPABASE = "SUA_URL_AQUI";
-const CHAVE_SUPABASE = "SUA_CHAVE_PUBLICA_AQUI";
+const URL_SUPABASE = "https://gyqvgandakzakaywexav.supabase.co";
+const CHAVE_SUPABASE = "sb_publishable_GNBCv1h5zhh3u_K7llXIJg_kOawfoWy";
 
 const db = supabase.createClient(
   URL_SUPABASE,
