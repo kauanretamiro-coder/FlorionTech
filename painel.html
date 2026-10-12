@@ -1,65 +1,64 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tela de Registro</title>
-    <link rel="stylesheet" href="painel.css">
-    <script src="painel.js" defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Florion | Painel de Monitoramento</title>
+  <link rel="stylesheet" href="painel.css">
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="painel.js" defer></script>
 </head>
 <body>
-    <nav>
-        <div class="categorias">
-            <div class="logo">
-                <img src="imagens/Florion logo.png" alt="">
-            </div>
-            <a href="registro.html" class="inicio"><button>🏠 inicio</button></a>
-            <a href="index.html" class="inicio"><button>🕖 Histórico</button></a>
-            <a href="index.html" class="inicio"><button>📈 Gráficos</button></a>
-        </div>  
+  <nav class="menu-lateral" aria-label="Menu principal">
+    <div class="categorias">
+      <div class="logo"><img src="imagens/Florion logo.png" alt="Logo Florion"></div>
+      <a href="painel.html" class="link-menu">🏠 Início</a>
+      <a href="index.html" class="link-menu">🕖 Histórico</a>
+      <a href="index.html" class="link-menu">📈 Gráficos</a>
+    </div>
+    <button type="button" class="link-menu sair-menu" id="sair">🚪 Sair</button>
+  </nav>
 
-        <div class="conta">
-            <a href="login.html" class="inicio"><button>🚪 Sair </button></a>
-        </div>
-    </nav>
-    <main>
+  <main>
+    <header class="cabecalho">
+      <div>
+        <h1>Painel de Monitoramento</h1>
+        <p class="subtitulo">Último registro de cada categoria</p>
+      </div>
+      <div class="acoes">
+        <button type="button" class="botao" id="abrirPopup">+ Adicionar manualmente</button>
+        <button type="button" class="botao secundario" id="atualizar">↻ Atualizar</button>
+      </div>
+    </header>
 
-        <div class="manual">
-            <div class="manual" id="popup">Adicionar <br> Manualmente</div>    
-        </div>
+    <p id="mensagemPainel" role="status">Carregando registros...</p>
+    <section class="painel" id="painelRegistros" aria-label="Registros mais recentes"></section>
+  </main>
 
-        <dialog id="popupmanual">
+  <dialog id="popupmanual" aria-labelledby="tituloPopup">
+    <div class="topo-popup">
+      <h2 id="tituloPopup">Adicionar registro</h2>
+      <button type="button" id="fecharpopup" class="close" aria-label="Fechar">&times;</button>
+    </div>
 
-         <button id="fecharpopup" class="close" aria-label="Fechar">&times;</button> 
+    <form id="formDados">
+      <label for="data">Data do registro</label>
+      <input type="date" id="data" required>
 
-            <div class="adicionar">
-                <select name="Quem" id="Quem">
-                    <option value="Kauan">Kauan</option>
-                    <option value="Igor">Igor</option>
-                    <option value="Samilly">Samilly</option>
-                    <option value="Guilherme">Guilherme</option>
-                </select>
+      <label for="tipo">O que deseja registrar?</label>
+      <select id="tipo" required>
+        <option value="">Selecione...</option>
+        <option value="temperatura">Temperatura</option>
+        <option value="ph">pH</option>
+        <option value="fosforo">Fósforo</option>
+      </select>
 
-                <select name="Oque" id="Oque">
-                    <option value="Ph"> PH</option>
-                    <option value="nitrogênio"> nitrogênio</option>
-                    <option value="Amônia"> Amônia</option>
-                    <option value="Fosforo">Fósforo</option>
-                </select>
-        </div>
+      <label for="valor" id="labelValor">Valor</label>
+      <input type="number" id="valor" step="any" placeholder="Digite o valor" required>
 
-        </dialog>
-
-        <div class="Temp">
-
-            <h1 class="Temperatura">🌡️Temperatura</h1>
-
-          <div class="valor">
-                <?= htmlspecialchars($temperatura) ?> °C
-           </div>
-
-        </div>
-
-    </main>
+      <button type="submit" class="botao salvar" id="botaoSalvar">Salvar dados</button>
+      <p id="mensagemFormulario" role="status"></p>
+    </form>
+  </dialog>
 </body>
 </html>

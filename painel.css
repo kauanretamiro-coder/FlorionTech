@@ -1,187 +1,265 @@
-body{
-    width: 100vw;
-    height: 100vh;
-    margin: 0;
+* {
+    box-sizing: border-box;
 }
 
-
-main{
-    float: right;
-    width: 90%;
-    height: 100%;
+body {
     margin: 0;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    background: #f1f5f9;
+    color: #1e293b;
 }
 
-nav{
-    float: left;
-    width:10vw;
-    height: 100vh;
-    background-color: navy;
-    margin: 0;
+button,
+input,
+select {
+    font: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+.menu-lateral {
+    position: fixed;
+    inset: 0 auto 0 0;
+    width: 190px;
+    background: #071f57;
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: space-between;
+    padding: 16px 10px;
 }
 
-.logo{
+.logo {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 24px;
+}
+
+.logo img {
+    width: 120px;
+    max-width: 100%;
+    height: auto;
+}
+
+.categorias {
     display: flex;
     flex-direction: column;
-    align-items: center;
-
+    gap: 8px;
 }
 
-.logo img{
-    margin-top: 10px;
-    width: 67%;
-}
-
-.inicio{
+.link-menu {
+    display: block;
     width: 100%;
-}
-
-.inicio img{
-    width: 20%;
-}
-
-a {
+    border: 0;
+    border-radius: 8px;
+    padding: 13px 10px;
+    text-align: left;
     text-decoration: none;
+    color: white;
+    background: #0c2e41;
+    font-size: 15px;
 }
 
-.inicio button{
-    width:100% ;
-    margin-top: 10px;
-    padding: 10px;
-    background-color: #0c2e41;
-    cursor: pointer;
-    color: #ffff;
-    font-size: clamp(1vw, 1.5vw, 2vw);
-    font-family: 'Space Grotesk';
+.link-menu:hover {
+    background: #155173;
+}
+
+.sair-menu {
+    margin-top: 16px;
+}
+
+main {
+    margin-left: 190px;
+    padding: 32px;
+}
+
+.cabecalho {
     display: flex;
-    justify-content: center;
-    border: 0;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 18px;
 }
 
-.conta{
-    width: 100%;
+h1 {
+    margin: 0;
+    font-size: clamp(24px, 3vw, 34px);
 }
 
-.fotoconta{
-    filter: brightness(0) invert(1);
+.subtitulo {
+    color: #64748b;
+    margin: 8px 0 0;
 }
 
-.manual{
-    float: right;
-}
-
-.manual{
-    margin: 10px;
-    border-radius: 20px;
-    padding: 5px;
-    background-color: #0c2e41;
-    cursor: pointer;
-    color: #ffff;
-    font-size: clamp(.85vw, .85vw, 2vw);
-    text-align: center;
-    font-family: 'Space Grotesk';
+.acoes {
     display: flex;
-    justify-content: center;
-    border: 0;
+    gap: 10px;
+    flex-wrap: wrap;
 }
 
-dialog::backdrop {
-  background: rgba(0, 0, 0, 0.375);
-  backdrop-filter: blur(6px);
+.botao {
+    background: #2563eb;
+    color: white;
+    border: none;
+    padding: 12px 16px;
+    border-radius: 8px;
+    font-weight: 600;
 }
 
-dialog img {
-  width: 100%;
-  max-height: 60vh;
-  object-fit: contain;
-  border-radius: 10px;
+.botao:hover {
+    background: #1d4ed8;
 }
 
-dialog p {
-  font-size: 18px;
+.botao:disabled {
+    opacity: .6;
+    cursor: wait;
+}
+
+.botao.secundario {
+    background: #e2e8f0;
+    color: #1e293b;
+}
+
+.botao.secundario:hover {
+    background: #cbd5e1;
+}
+
+#mensagemPainel {
+    margin: 26px 0 14px;
+    color: #475569;
+}
+
+.painel {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 18px;
+}
+
+.card {
+    background: white;
+    border-radius: 14px;
+    padding: 24px;
+    box-shadow: 0 4px 14px #00000010;
+}
+
+.card h3 {
+    margin: 0 0 18px;
+    color: #475569;
+    font-size: 17px;
+}
+
+.valor {
+    font-size: 32px;
+    font-weight: 700;
+    color: #2563eb;
+    overflow-wrap: anywhere;
+}
+
+.detalhes {
+    color: #64748b;
+    font-size: 13px;
+    line-height: 1.6;
+    margin-top: 18px;
 }
 
 dialog {
-  padding: 20px;
-  border: none;
-  border-radius: 16px;
-  text-align: center;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    border: none;
+    border-radius: 16px;
+    padding: 24px;
+    width: min(400px, calc(100vw - 28px));
+    box-shadow: 0 14px 45px #0004;
+}
+
+dialog::backdrop {
+    background: #0007;
+    backdrop-filter: blur(4px);
+}
+
+.topo-popup {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.topo-popup h2 {
+    margin: 0;
+    font-size: 21px;
 }
 
 .close {
-  float: right;
-  border: none;
-  background: none;
-  font-size: 26px;
-  cursor: pointer;
+    border: none;
+    background: none;
+    font-size: 28px;
+    color: #334155;
 }
 
-.adicionar{
-    width: 500px;
-    height: 700px;
-    background-color: rgba(190, 188, 188, 0.992);
+#formDados {
     display: flex;
     flex-direction: column;
-    align-items: center;
-}
-
-#Quem{
-    width: 60%;
-    padding: 10px;
+    gap: 9px;
     margin-top: 20px;
-    text-align: center;
-    font-size: clamp(1vw, 1.5vw, 2vw);
-    font-family: 'Montserrat';
+}
+
+#formDados label {
     font-weight: 600;
-    border-radius: 10px;
+    margin-top: 9px;
 }
 
-#Quem option{
-    font-size: clamp(1vw, 1.5vw, 2vw);
-    font-family: 'Montserrat';
-    font-weight: 600;
+#formDados input,
+#formDados select {
+    width: 100%;
+    padding: 11px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    background: white;
 }
 
-#Oque{
-    width: 60%;
-    padding: 10px;
-    margin-top: 20px;
-    text-align: center;
-    font-size: clamp(1vw, 1.5vw, 2vw);
-    font-family: 'Montserrat';
-    font-weight: 600;
-    border-radius: 10px;
+#formDados .salvar {
+    margin-top: 14px;
 }
 
-#Oque option{
-    font-size: clamp(1vw, 1.5vw, 2vw);
-    font-family: 'Montserrat';
-    font-weight: 600;
+#mensagemFormulario {
+    min-height: 20px;
+    font-size: 14px;
+    margin: 5px 0 0;
 }
 
-.Temp{
-    margin: 20px;
-    width: 300px;
-    height: 400px;
-    border-radius: 20px;
-    background-color: rgba(0, 0, 0, 0.3);
-    display:flex;
-    flex-direction: column;
-    align-items: center;
-}
+@media (max-width: 700px) {
+    .menu-lateral {
+        position: static;
+        width: 100%;
+        padding: 10px;
+    }
 
-.Temperatura{
-    font-size: clamp(1vw, 1.5vw, 2vw);
-    font-family: 'Montserrat';
-}
+    .logo {
+        margin-bottom: 10px;
+    }
 
-.valor{
-    font-size: clamp(2vw, 2vw, 3vw);
-    font-family: 'Montserrat';
-    font-weight: 600;
+    .logo img {
+        width: 90px;
+    }
+
+    .categorias {
+        gap: 6px;
+    }
+
+    .link-menu {
+        text-align: center;
+    }
+
+    main {
+        margin-left: 0;
+        padding: 20px 14px;
+    }
+
+    .cabecalho {
+        align-items: flex-start;
+    }
+
+    .acoes {
+        width: 100%;
+    }
 }
