@@ -1,0 +1,180 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: #f1f5f9;
+    color: #1e293b;
+    font-family: Arial, sans-serif;
+}
+.menu-lateral {
+    position: fixed;
+    inset: 0 auto 0 0;
+    width: 190px;
+    background: #071f57;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 16px 10px;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 24px;
+}
+
+.logo img {
+    width: 120px;
+    max-width: 100%;
+    height: auto;
+}
+
+
+.categorias {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.link-menu {
+    display: block;
+    width: 100%;
+    border: 0;
+    border-radius: 8px;
+    padding: 13px 10px;
+    text-align: left;
+    text-decoration: none;
+    color: white;
+    background: #0c2e41;
+    font-size: 15px;
+}
+
+.link-menu:hover {
+    background: #155173;
+}
+
+.sair-menu {
+    margin-top: 16px;
+}
+
+main {
+    margin-left: 180px;
+    padding: 35px;
+}
+
+h1 {
+    margin-bottom: 8px;
+}
+
+header p,
+.observacao {
+    color: #64748b;
+}
+
+.filtros {
+    display: flex;
+    align-items: end;
+    flex-wrap: wrap;
+    gap: 15px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    margin-top: 25px;
+}
+
+.filtros label {
+    display: block;
+    margin-bottom: 7px;
+    font-size: 14px;
+}
+
+.filtros input,
+.filtros select {
+    min-width: 160px;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+}
+
+.filtros button {
+    padding: 11px 16px;
+    color: #fff;
+    background: #0c2e41;
+    border: 0;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.filtros button:disabled {
+    opacity: .6;
+    cursor: wait;
+}
+
+#mensagem {
+    margin: 20px 0;
+    color: #475569;
+}
+
+.grafico-card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 4px 12px #0001;
+}
+
+.grafico-area {
+    position: relative;
+    width: 100%;
+    height: 400px;
+}
+
+.observacao {
+    font-size: 14px;
+}
+
+@media (max-width: 700px) {
+    .menu {
+        position: static;
+        width: 100%;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    .logo {
+        margin: 0;
+    }
+
+    .logo img {
+        width: 65px;
+    }
+
+    .menu a,
+    .menu button {
+        width: auto;
+    }
+
+    .menu button {
+        margin-top: 0;
+    }
+
+    main {
+        margin-left: 0;
+        padding: 20px;
+    }
+
+    .filtros>div {
+        width: 100%;
+    }
+
+    .grafico-card {
+        padding: 12px;
+    }
+
+    .grafico-area {
+        height: 330px;
+    }
+}

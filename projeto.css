@@ -110,8 +110,21 @@ body {
         width: 60%;
     }
 
+    #sobre-nos{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .equipe{
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
     .sobre{
-        max-width: 50%;
+        max-width: 80%;
     }
 }
 
@@ -518,6 +531,7 @@ main {
     align-items: center;
     flex-direction: column;
     margin-top: 20px;
+    font-size:17px;
 }
 
 .tanque{
@@ -545,6 +559,14 @@ main {
     margin-top: 30px;
 }
 
+.peixe{
+    transform: translateX(-20%);
+}
+
+.invertido{
+    transform: scaleX(-1) translate(-20%, -50%);
+}
+
 .description{
     display: flex;
     justify-content: space-evenly;
@@ -553,10 +575,6 @@ main {
     font-size:clamp(1vw, 1vw, 3vw);
     margin-top: 20px;
     margin: 20px;
-}
-
-.description span{
-
 }
 
 .description h1{
@@ -607,6 +625,42 @@ main {
     text-align: center;
     margin: 0;
     flex-wrap: wrap;
+    gap: 70px;
+}
+
+.sobre-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.sobre-card {
+  background: rgba(168, 168, 168, 0.438);
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 5px 20px #00000010;
+  transition: transform 0.3s;
+  margin: 10px;
+}
+
+.sobre-card:hover {
+  transform: translateY(-8px);
+}
+
+.sobre-card h3 {
+  color: #0c2e41;
+  margin-bottom: 15px;
+}
+
+.sobre-card p {
+  color: #64748b;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .sobre-cards {
+    grid-template-columns: 1fr;
+  }
 }
 
 .kauan img{
@@ -714,21 +768,13 @@ dialog {
     margin: 0;
 }
 
-#sobre-nos{
-    width: 100%;
-    height: auto;
-    display: flex;
-    justify-content: space-evenly; 
-    margin-top: 50px;
-}
-
 .sobre{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     background-color: #16c9d6e0;
-    width: auto;
+    width: 80%;
     height: auto;
     border-radius: 20px;
     font-size: clamp(.85rem, 2vw, 2.5vw);

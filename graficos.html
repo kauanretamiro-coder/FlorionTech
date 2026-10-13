@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gráficos - Florion</title>
+    <link rel="stylesheet" href="graficos.css">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.8/dist/chart.umd.min.js"></script>
+    <script src="graficos.js" defer></script>
+</head>
+
+<body>
+
+    <nav class="menu-lateral" aria-label="Menu principal">
+        <div class="categorias">
+            <div class="logo"><img src="imagens/Florion logo.png" alt="Logo Florion"></div>
+            <a href="painel.html" class="link-menu">🏠 Início</a>
+            <a href="historico.html" class="link-menu">🕖 Histórico</a>
+            <a href="graficos.html" class="link-menu">📈 Gráficos</a>
+        </div>
+        <button type="button" class="link-menu sair-menu" id="sair">🚪 Sair</button>
+    </nav>
+    
+    <main>
+        <header>
+            <h1>Gráficos de monitoramento</h1>
+            <p>Compare os registros em um intervalo de datas.</p>
+        </header>
+        <form id="filtros" class="filtros">
+            <div><label for="dataInicio">Data inicial</label><input id="dataInicio" type="date" required></div>
+            <div><label for="dataFim">Data final</label><input id="dataFim" type="date" required></div>
+            <div><label for="categoria">Categoria</label>
+                <select id="categoria">
+                    <option value="temperatura">Temperatura</option>
+                    <option value="ph">pH</option>
+                    <option value="fosforo">Fósforo</option>
+                </select>
+            </div>
+            <button type="submit">Comparar datas</button>
+        </form>
+        <p id="mensagem" role="status">Carregando...</p>
+        <section class="grafico-card" aria-label="Gráfico de comparação">
+            <div class="grafico-area"><canvas id="grafico"></canvas></div>
+        </section>
+    </main>
+</body>
+
+</html>
