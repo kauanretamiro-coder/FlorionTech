@@ -159,3 +159,32 @@ async function iniciar() {
   setInterval(carregarRegistros, 30000);
 }
 iniciar();
+
+
+async function carregarUmidadeSolo() {
+  const { data, error } = await db
+    .from("leituras_solo")
+    .select("umidade_percentual, criado_em")
+    .order("criado_em", { ascending: false })
+    .limit(1)
+    .maybeSingle();
+
+  if (error) {
+    console.error("Erro ao carregar umidade:", error);
+    return;
+  }
+
+  const elemento = document.getElementById("umidadeSolo");
+
+  if (!elemento) return;
+
+  elemento.textContent = data
+    ? `${data.umidade_percentual.toFixed(1)}%`
+    : "Sem medições";
+}
+
+// Chame depois que o usuário estiver autenticado.
+carregarUmidadeSolo();
+
+// Atualiza a cada 30 segundos.
+setInterval(carregarUmidadeSolo, 30000);
