@@ -149,21 +149,16 @@ document.getElementById("sair").addEventListener("click", async () => {
 async function iniciar() {
   if (!(await usuarioLogado())) return;
 
+  // Carrega os dados assim que o usuário entra
   await carregarRegistros();
   await carregarUmidadeSolo();
   await carregarLuminosidade();
 
+  // Atualiza os dados automaticamente
   setInterval(carregarRegistros, 30000);
   setInterval(carregarUmidadeSolo, 10000);
-  setInterval(carregarLuminosidade, 3000);
+  setInterval(carregarLuminosidade, 10000);
 }
-
-  await carregarRegistros();
-  setInterval(carregarRegistros, 30000);
-
-
-iniciar();
-
 
 async function carregarUmidadeSolo() {
   const { data, error } = await db
@@ -237,6 +232,4 @@ if (!valorElemento || !statusElemento || !horarioElemento) {
     "Última leitura: " +
     new Date(data.criado_em).toLocaleString("pt-BR");
 }
-carregarUmidadeSolo();
-
-setInterval(carregarUmidadeSolo, 30000);
+  iniciar();
