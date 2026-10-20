@@ -1,5 +1,3 @@
-// Cole aqui a URL e a chave pública (publishable) do seu projeto.
-// NUNCA use a service_role ou uma chave secreta no navegador.
 const URL_SUPABASE = "https://gyqvgandakzakaywexav.supabase.co";
 const CHAVE_PUBLICA = "sb_publishable_GNBCv1h5zhh3u_K7llXIJg_kOawfoWy";
 const db = supabase.createClient(URL_SUPABASE, CHAVE_PUBLICA);
@@ -160,6 +158,10 @@ async function iniciar() {
   setInterval(carregarLuminosidade, 3000);
 }
 
+  await carregarRegistros();
+  setInterval(carregarRegistros, 30000);
+
+
 iniciar();
 
 
@@ -235,3 +237,6 @@ if (!valorElemento || !statusElemento || !horarioElemento) {
     "Última leitura: " +
     new Date(data.criado_em).toLocaleString("pt-BR");
 }
+carregarUmidadeSolo();
+
+setInterval(carregarUmidadeSolo, 30000);
