@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Histórico - Florion</title>
+  <link rel="stylesheet" href="historico.css">
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="historico.js" defer></script>
+  <link rel="icon" type="image/png" href="imagens/Emblema.png">
+</head>
+
+<body>
+
+  <nav class="menu-lateral" aria-label="Menu principal">
+    <div class="categorias">
+      <div class="logo"><img src="imagens/Florion logo.png" alt="Logo Florion"></div>
+      <a href="painel.html" class="link-menu">🏠 Início</a>
+      <a href="historico.html" class="link-menu">🕖 Histórico</a>
+      <a href="graficos.html" class="link-menu">📈 Gráficos</a>
+    </div>
+    <button type="button" class="link-menu sair-menu" id="sair">🚪 Sair</button>
+  </nav>
+
+  <main>
+    <header>
+      <h1>Histórico de registros</h1>
+      <p>Consulte as medições cadastradas no Florion.</p>
+    </header>
+
+    <section class="filtros">
+      <div>
+        <label for="filtroTipo">Categoria</label>
+        <select id="filtroTipo">
+          <option value="">Todas</option>
+          <option value="temperatura">Temperatura</option>
+          <option value="ph">pH</option>
+          <option value="fosforo">Fósforo</option>
+        </select>
+      </div>
+
+      <div>
+        <label for="filtroData">Data</label>
+        <input type="date" id="filtroData">
+      </div>
+
+      <button id="limparFiltros">
+        Limpar filtros
+      </button>
+
+      <button id="atualizar">
+        Atualizar
+      </button>
+    </section>
+
+    <p id="mensagem" role="status">
+      Carregando registros...
+    </p>
+
+    <div class="tabela-container">
+      <table>
+        <thead>
+          <tr>
+            <th>Data</th>
+            <th>Categoria</th>
+            <th>Valor</th>
+            <th>Cadastrado por</th>
+          </tr>
+        </thead>
+
+        <tbody id="corpoTabela"></tbody>
+      </table>
+    </div>
+  </main>
+
+</body>
+
+</html>
