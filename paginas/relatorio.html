@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relatórios</title>
+    <link rel="stylesheet" href="relatório.css">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="relatorio.js" defer></script>
+</head>
+
+<body>
+    <nav class="menu-lateral" aria-label="Menu principal">
+        <div class="categorias">
+            <div class="logo">
+                <img src="../imagens/Florion logo.png" alt="Logo Florion">
+            </div>
+
+            <a href="painel.html" class="link-menu">
+                🏠 Início
+            </a>
+
+            <a href="historico.html" class="link-menu">
+                🕖 Histórico
+            </a>
+
+            <a href="graficos.html" class="link-menu">
+                📈 Gráficos
+            </a>
+
+            <a href="relatorio.html" class="link-menu relatorio">
+                📋 Relatórios
+            </a>
+        </div>
+
+        <button type="button" class="link-menu sair-menu" id="sair">
+            🚪 Sair
+        </button>
+    </nav>
+    <main class="conteudo">
+
+        <header class="cabecalho">
+            <div>
+                <span class="etiqueta">
+                    Inteligência Artificial
+                </span>
+
+                <h1 style="margin-top:14px">
+                    Relatórios Inteligentes
+                </h1>
+
+                <p class="subtitulo">
+                    Análise dos dados da aquaponia FlorionTech
+                </p>
+            </div>
+
+            <button class="botao secundario" id="atualizarSensores" type="button">
+                ↻ Atualizar sensores
+            </button>
+        </header>
+
+        <!-- ULTIMAS LEITURAS -->
+
+        <h2>Últimas leituras dos sensores</h2>
+
+        <section class="grade-sensores">
+
+            <article class="cartao">
+                <h3>🌡️ Temperatura da água</h3>
+
+                <div class="valor" id="temperatura">
+                    -- °C
+                </div>
+
+                <small class="horario" id="horaTemperatura">
+                    Aguardando dados...
+                </small>
+            </article>
+
+            <article class="cartao">
+                <h3>💧 Nível da água</h3>
+
+                <div class="valor" id="nivelAgua">
+                    --
+                </div>
+
+                <small class="horario" id="horaNivel">
+                    Aguardando dados...
+                </small>
+            </article>
+
+            <article class="cartao">
+                <h3>☀️ Luminosidade</h3>
+
+                <div class="valor" id="luminosidade">
+                    --
+                </div>
+
+                <small class="horario" id="horaLuz">
+                    Aguardando dados...
+                </small>
+            </article>
+
+        </section>
+
+        <p class="muted" id="estadoSensores" role="status">
+            Consultando o Supabase...
+        </p>
+
+        <!-- GERADOR DE RELATORIOS -->
+
+        <section class="secao">
+            <h2>🤖 Gerar relatório com IA</h2>
+
+            <p class="muted">
+                A IA poderá interpretar tendências,
+                apontar possíveis problemas e sugerir
+                verificações com base no histórico
+                dos sensores.
+            </p>
+
+            <div class="controles">
+
+                <div class="campo">
+                    <label for="periodo">
+                        Período de análise
+                    </label>
+
+                    <select id="periodo">
+                        <option value="6">
+                            Últimas 6 horas
+                        </option>
+
+                        <option value="24" selected>
+                            Últimas 24 horas
+                        </option>
+
+                        <option value="168">
+                            Últimos 7 dias
+                        </option>
+                    </select>
+                </div>
+
+                <button type="button" id="botaoGerar" class="botao">
+                    ✨ Gerar relatório com IA
+                </button>
+
+                <button type="button" id="botaoImprimir" class="botao secundario" disabled>
+                    🖨️ Salvar em PDF
+                </button>
+
+            </div>
+
+            <p class="mensagem" id="mensagemIA" role="status">
+                Selecione um período para gerar o relatório.
+            </p>
+        </section>
+
+        <!-- RESULTADO DA IA -->
+
+        <div id="resultadoRelatorio" hidden>
+
+            <section class="secao">
+                <h2>📋 Resumo do período</h2>
+
+                <span class="risco" id="nivelRisco">
+                    Indeterminado
+                </span>
+
+                <p class="texto-relatorio" id="resumoIA"></p>
+
+                <small class="horario" id="dataRelatorio">
+                </small>
+            </section>
+
+            <div class="grade-relatorio">
+
+                <section class="secao">
+                    <h2>⚠️ Possíveis problemas</h2>
+
+                    <ul class="lista-relatorio" id="listaRiscos"></ul>
+                </section>
+
+                <section class="secao">
+                    <h2>💡 Sugestões da IA</h2>
+
+                    <ul class="lista-relatorio" id="listaSugestoes"></ul>
+                </section>
+
+            </div>
+
+            <p class="aviso">
+                As análises apresentam hipóteses e não
+                substituem a verificação dos sensores
+                nem a orientação técnica para o manejo
+                de peixes e plantas. Dados incorretos
+                podem produzir conclusões incorretas.
+            </p>
+
+        </div>
+
+    </main>
+    </div>
+</body>
+
+</html>

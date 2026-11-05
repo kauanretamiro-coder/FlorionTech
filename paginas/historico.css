@@ -56,6 +56,23 @@ body {
     background: #155173;
 }
 
+.historico {
+    display: block;
+    width: 100%;
+    border: 0;
+    border-radius: 8px;
+    padding: 13px 10px;
+    text-align: left;
+    text-decoration: none;
+    color: white;
+    background: #1684c3;
+    font-size: 15px;
+}
+
+.historico:hover {
+    background: #155173;
+}
+
 .sair-menu {
     margin-top: 16px;
 }
